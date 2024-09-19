@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="icon" href="/images/icon.png" type="image/x-icon">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Regular Expression (Regex) for all</title>
+    <meta name="description" content="By Jolicious">
+    <meta name="keywords" content='blog, gokarna, hugo, jolicious, regex, regular expression, python'>
+
+    <meta property="og:url" content="http://localhost:1313/blogs/regex/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Regular Expression (Regex) for all">
+    <meta property="og:description" content="By Jolicious">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.jpg">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regular Expression (Regex) for all">
+    <meta name="twitter:description" content="By Jolicious">
+    <meta property="twitter:domain" content="http://localhost:1313/blogs/regex/">
+    <meta property="twitter:url" content="http://localhost:1313/blogs/regex/">
+    <meta name="twitter:image" content="http://localhost:1313/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="http://localhost:1313/blogs/regex/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.9a920d7dabdbad8363b6a0a94e29a9dfebdb7ee64cfcb193a0145e512ef2bdab.js" integrity="sha256-mpINfavbrYNjtqCpTimp3&#43;vbfuZM/LGToBReUS7yvas="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/avatar.jpg' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Jolicious</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/" > Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/blogs/" > Blogs </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/ctf/" > CTF </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/about/" > About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/" > Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                <a>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/" > Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/blogs/" > Blogs </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/ctf/" > CTF </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/about/" > About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/" > Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Regular Expression (Regex) for all</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">By Jolicious</small>
+	
+
+	
+          <p class="post-date">September 18, 2024
+           
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/regex">regex</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/regular-expression">regular expression</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/python">python</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h2 id="code-1">Code 1</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matchregex</span>(pattern, text):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(pattern, text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Found:&#34;</span>, <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(<span style="color:#66d9ef">match</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No match found&#34;</span>)
+</span></span></code></pre></div><p>In simple this function will take a pattern and a text if the text matches the pattern it print the matched text. If not then it will print <strong>&lsquo;No match found&rsquo;</strong>.</p>
+<p>Some basics:</p>
+<h2 id="quantifiers-repetition">Quantifiers (Repetition):</h2>
+<h3 id="asterisk-">Asterisk <code>*</code></h3>
+<p>The asterisk (*) in regular expressions is a quantifier that tells the pattern to look for only one character or one group (group is defined through brackets such as <code>(abc)</code> where <code>abc</code> is a group) right before it, and match it as many times as possible, <strong><em>including zero times.</em></strong></p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;ab*c&#39;</span>, <span style="color:#e6db74">&#39;abbbc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: abbbc&#34;</span>
+</span></span></code></pre></div><p><img src="/Regex/regex1.png" alt="alt text"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;ab*c&#39;</span>, <span style="color:#e6db74">&#39;aaabbbc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: abbbc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(ab)*c&#39;</span>, <span style="color:#e6db74">&#39;ababc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: ab&#34;</span>
+</span></span></code></pre></div><p><strong>Q.</strong> Wait but why didn&rsquo;t the other <strong>&lsquo;a&rsquo;</strong> print?</p>
+<p><strong>-&gt;</strong> It is looking for a pattern such as <strong>&lsquo;abc&rsquo;</strong> in which <strong>&lsquo;b&rsquo;</strong> can be repeated 0 times or any number of times because it is before the asterisk (*). It is matching the pattern <strong>&lsquo;abc&rsquo;</strong> from 3rd <strong>&lsquo;a&rsquo;</strong>, so it in printing from there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc*d&#39;</span>, <span style="color:#e6db74">&#39;abbbcd&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><p><strong>Q.</strong> Why didn&rsquo;t it show any matches?</p>
+<p><strong>-&gt;</strong> It is looking for a pattern such as <strong>&lsquo;abcd&rsquo;</strong> in which <strong>&lsquo;c&rsquo;</strong> can be repeated 0 times or any number of times. It is not matching because <strong>&lsquo;c&rsquo;</strong> can be repeated multiple times, but since <strong>&lsquo;b&rsquo;</strong> is repeated multiple times, it breaks the pattern.</p>
+<h3 id="plus-">Plus <code>+</code></h3>
+<p>The (+) symbol in regular expressions is a quantifier that tells the pattern to look for the character or group right before it, and match it as many times as possible, <em><strong>but not including zero times.</strong></em></p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc+&#39;</span>,<span style="color:#e6db74">&#39;ab&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><p>Because there is no occurance of <strong>c</strong>, it prints &ldquo;No match found&rdquo;.</p>
+<p>Difference between <strong>*</strong> and <strong>+</strong> is below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc*&#39;</span>,<span style="color:#e6db74">&#39;ab&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: ab&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc+&#39;</span>,<span style="color:#e6db74">&#39;ab&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><h3 id="question-mark-">Question Mark <code>?</code></h3>
+<p>The question mark (?) in regular expressions is a quantifier that tells the pattern to look for only one character or one group right before it, and match it only 1 time or <strong><em>include zero times.</em></strong></p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;https?://&#39;</span>,<span style="color:#e6db74">&#39;https://&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: https://&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;https?://&#39;</span>,<span style="color:#e6db74">&#39;http://&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: http://&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;https?://&#39;</span>,<span style="color:#e6db74">&#39;httpss://&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><h3 id="exact-count-n">Exact Count <code>{n}</code></h3>
+<p>It specifies that the preceding character or group must appear exactly n times in the string to make a match.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c</span><span style="color:#e6db74">{5}</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74">&#39;ccccc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: ccccc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc</span><span style="color:#e6db74">{5}</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74">&#39;abbccccc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc</span><span style="color:#e6db74">{5}</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74">&#39;abccccc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: abccccc&#34;</span>
+</span></span></code></pre></div><p>It printed &ldquo;No match found when &ldquo;b&rdquo; is provided twice in the second case because, it is trying to match a pattern &ldquo;abc&rdquo; where &ldquo;c&rdquo; can be repeated 5 number of times.</p>
+<h3 id="minimum-count-n">Minimum Count <code>{n,}</code></h3>
+<p>The preceding character or group must appear at least n times, but there’s no upper limit. It can match n, n+1, n+2, and so on.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc{5,}&#39;</span>,<span style="color:#e6db74">&#39;abcc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc{5,}&#39;</span>,<span style="color:#e6db74">&#39;abccccc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: abccccc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc{5,}&#39;</span>,<span style="color:#e6db74">&#39;abcccccccc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: abcccccccc&#34;</span>
+</span></span></code></pre></div><h3 id="range-count-nm">Range Count <code>{n,m}</code></h3>
+<p>The preceding character or group must appear at least n times and at most m times.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c{5,6}&#39;</span>,<span style="color:#e6db74">&#39;cccccc&#39;</span>) <span style="color:#75715e"># 6 &#39;c&#39; characters</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: cccccc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c{5,6}&#39;</span>,<span style="color:#e6db74">&#39;ccccc&#39;</span>) <span style="color:#75715e"># 5 &#39;c&#39; characters</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: ccccc&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c{5,6}&#39;</span>,<span style="color:#e6db74">&#39;cccc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><h2 id="anchors-positioning">Anchors (Positioning):</h2>
+<h3 id="start-of-line-">Start of Line <code>^</code></h3>
+<p>It ensures that the match happens at the beginning of a string. The pattern must appear right at the start of the string. If it occurs elsewhere, the match will fail.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^c&#39;</span>,<span style="color:#e6db74">&#39;chatbot&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: c&#34;</span>
+</span></span></code></pre></div><h3 id="end-of-line-">End of Line <code>$</code></h3>
+<p>It ensures that the match happens at the end of a string. The pattern must appear left at the end of the string. If it occurs earlier, the match will fail.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;t$&#39;</span>,<span style="color:#e6db74">&#39;chatbot&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: t&#34;</span>
+</span></span></code></pre></div><h2 id="character-classes-sets">Character Classes (Sets):</h2>
+<h3 id="dot-">Dot <code>.</code></h3>
+<p>The <code>.</code> (dot) in regex is a wildcard that matches any single character except a newline (<code>\n</code>).</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c.t&#39;</span>,<span style="color:#e6db74">&#39;cat&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: cat&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c.t&#39;</span>,<span style="color:#e6db74">&#39;c-t&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: c-t&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;c.t&#39;</span>,<span style="color:#e6db74">&#39;caat&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><h3 id="character-class-">Character Class <code>[...]</code></h3>
+<p>It matches exactly one character at a time.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[aeiou]&#39;</span>,<span style="color:#e6db74">&#39;heello&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: eeo&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[aeiou]&#39;</span>,<span style="color:#e6db74">&#39;hello&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: eo&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]&#39;</span>,<span style="color:#e6db74">&#39;hello&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: hello&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]&#39;</span>,<span style="color:#e6db74">&#39;Hello&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: ello&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-zA-Z0-9]&#39;</span>,<span style="color:#e6db74">&#39;Hello123&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: Hello123&#34;</span>
+</span></span></code></pre></div><h3 id="negated-character-class-">Negated Character Class <code>[^...]</code></h3>
+<p>The regex pattern [^&hellip;] is used to match any character that is not included in the specified set.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^a]&#39;</span>,<span style="color:#e6db74">&#39;ameow&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: meow&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[^a]&#39;</span>,<span style="color:#e6db74">&#39;maeow&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: meow&#34;</span>
+</span></span></code></pre></div><h2 id="predefined-character-classes">Predefined Character Classes:</h2>
+<h3 id="digit-d">Digit <code>\d</code></h3>
+<p>The regex pattern \d is used to match any single digit character from 0 to 9. excluding spaces</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d&#39;</span>,<span style="color:#e6db74">&#39;126748 99&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 12674899&#34;</span>
+</span></span></code></pre></div><h3 id="non-digit-d">Non-Digit <code>\D</code></h3>
+<p>The regex pattern \D is used to match any character that is not a digit including spaces.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\D&#39;</span>,<span style="color:#e6db74">&#39;126748hello hi&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: hello hi&#34;</span>
+</span></span></code></pre></div><h3 id="word-character-w">Word Character <code>\w</code></h3>
+<p>The regex pattern \w is used to match any &ldquo;word character,&rdquo; which includes alphanumeric characters (letters and digits) and the underscore (_) excluding spaces.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w&#39;</span>,<span style="color:#e6db74">&#39;126748hello hi&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 126748hellohi&#34;</span>
+</span></span></code></pre></div><h3 id="non-word-character-w">Non-Word Character <code>\W</code></h3>
+<p>The regex pattern \W is used to match any character that is not a word character including spaces.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\W&#39;</span>,<span style="color:#e6db74">&#39;12 !@#$ $%^&amp;&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found:  !@#$ $%^&amp;&#34;</span>
+</span></span></code></pre></div><h3 id="whitespace-character-s">Whitespace Character <code>\s</code></h3>
+<p>The regex pattern \s is used to match any whitespace character, including spaces, tabs, newlines, and other whitespace characters.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\s&#39;</span>,<span style="color:#e6db74">&#39;126748</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">99&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: &#34;</span>
+</span></span></code></pre></div><p>It showed empty result as spaces cannot be seen.</p>
+<h3 id="non-whitespace-character-s">Non-Whitespace Character <code>\S</code></h3>
+<p>The regex pattern \S is used to match any character that is not a whitespace character.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\S&#39;</span>,<span style="color:#e6db74">&#39;126748</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">99&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 12674899&#34;</span>
+</span></span></code></pre></div><h2 id="grouping-and-alternation">Grouping and Alternation</h2>
+<h3 id="capturing-group-">Capturing Group <code>(...)</code></h3>
+<p>Groups multiple elements together.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(abc)&#39;</span>,<span style="color:#e6db74">&#39;abc abc abc bc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: abcabcabc&#34;</span>
+</span></span></code></pre></div><h3 id="alternation-">Alternation <code>|</code></h3>
+<p>Alternation (acts like OR). Matches the pattern before or after the |.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;cat|bat|nat&#39;</span>,<span style="color:#e6db74">&#39;cat rhymes with bat, right?&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: catbat&#34;</span>
+</span></span></code></pre></div><h2 id="escape-sequences">Escape Sequences</h2>
+<h3 id="backslash-">Backslash <code>\\</code></h3>
+<p>Escapes special characters (e.g., *, +, .). Allows you to use characters literally.</p>
+<h2 id="boundary-matchers">Boundary Matchers</h2>
+<h3 id="word-boundary-b">Word Boundary <code>\b</code></h3>
+<p>Finds the spot where a word starts or ends and it shouldn&rsquo;t be surrounded by characters.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\bbat\b&#39;</span>,<span style="color:#e6db74">&#39;batact&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\bbat&#39;</span>,<span style="color:#e6db74">&#39;catbatact&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\bbat&#39;</span>,<span style="color:#e6db74">&#39;cat bat act&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: bat&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\bbat&#39;</span>,<span style="color:#e6db74">&#39;batact&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: bat&#34;</span>
+</span></span></code></pre></div><h4 id="difference-between--and-b">DIfference between ^$ and \b</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^bat$&#39;</span>,<span style="color:#e6db74">&#39;cat bat act&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\bbat\b&#39;</span>,<span style="color:#e6db74">&#39;cat bat act&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: bat&#34;</span>
+</span></span></code></pre></div><h3 id="non-word-boundary-b">Non-Word Boundary <code>\B</code></h3>
+<p>Matches a non-word boundary which mean the word should be surrounded by random characters.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\Bbat\B&#39;</span>,<span style="color:#e6db74">&#39;catbatact&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: bat&#34;</span>
+</span></span></code></pre></div><h2 id="regex-special-constructs">Regex Special Constructs</h2>
+<h3 id="atomic-group-">Atomic Group <code>(?&gt;...)</code></h3>
+<p>An atomic group is a special type of group in regular expressions that helps the pattern engine by preventing it from reconsidering or backtracking within that group once it has made a match.</p>
+<p>In simpler terms with examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(?&gt;a|ab)c&#34;</span>,<span style="color:#e6db74">&#34;abc&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><p>The regex first tries to match <strong>&lsquo;a&rsquo;</strong> followed by <strong>&lsquo;c&rsquo;</strong>, if it fails it will not try again to match <strong>&lsquo;ab&rsquo;</strong> followed by <strong>&lsquo;c&rsquo;</strong>.</p>
+<h3 id="positive-lookahead-">Positive Lookahead <code>(?=...)</code></h3>
+<p>Checks if a pattern exists after the current position but does not include it in the match.</p>
+<p>In simpler terms with examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\d+(?=\D)&#34;</span>,<span style="color:#e6db74">&#34;123abc&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 123&#34;</span>
+</span></span></code></pre></div><p>In the above result, the regex checks if any alphabets are there after digits, if there is, it matches, only the digits will print and the alphabets will be ignored.</p>
+<h3 id="negative-lookahead-">Negative Lookahead <code>(?!...)</code></h3>
+<p>Checks if a pattern does not exist after the current position.</p>
+<p>In simpler terms with examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\d+(?!\D)&#34;</span>,<span style="color:#e6db74">&#34;3abc&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;No match found&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\d+(?!\D)&#34;</span>,<span style="color:#e6db74">&#34;3&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 3&#34;</span>
+</span></span></code></pre></div><p>In the above result, the regex checks if no alphabets are there after digits. If there is no alphabets, it will match else it will fail.</p>
+<h3 id="positive-lookbehind-">Positive Lookbehind <code>(?&lt;=...)</code></h3>
+<p>Ensures that a specific pattern precedes the current position.</p>
+<p>In simpler terms with examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(?&lt;=\$)\d+&#34;</span>,<span style="color:#e6db74">&#34;$300, 400, $500&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 300500&#34;</span>
+</span></span></code></pre></div><p>In the above result, the regex checks if the <strong>&rsquo;$&rsquo;</strong> is before the digits, if it is, it will match else it will fail. Since <strong>&rsquo;$&rsquo;</strong> is before digits of <strong>&lsquo;300&rsquo;</strong> and <strong>&lsquo;500&rsquo;</strong>, it matches them.</p>
+<h3 id="negative-lookbehind-">Negative Lookbehind <code>(?&lt;!...)</code></h3>
+<p>Ensures that a specific pattern does not precede the current position.</p>
+<p>In simpler terms with examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(?&lt;!\$)\d*&#34;</span>,<span style="color:#e6db74">&#34;$3, 4, $5&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 4&#34;</span>
+</span></span></code></pre></div><p>In the above result, the regex checks if the <strong>&rsquo;$&rsquo;</strong> is not before the digits, if it matches then it will print it. Since <strong>&lsquo;4&rsquo;</strong> is not after the <strong>&rsquo;$&rsquo;</strong>, it matches.</p>
+<h3 id="named-capture-groups-pname">Named Capture Groups <code>(?P&lt;name&gt;...)</code></h3>
+<p>A named capture group allows you to assign a name to a capturing group, which can be useful when you want to refer to specific groups later in the pattern or when processing matches.</p>
+<h2 id="code-2">Code 2</h2>
+<p>The code to be used for the following example is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matchregex1</span>(pattern, text):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Found:&#34;</span>, <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;year&#39;</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No match found&#34;</span>)
+</span></span></code></pre></div><p>In simpler terms with examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex1(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(?P&lt;year&gt;\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)-(?P&lt;month&gt;\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)-(?P&lt;day&gt;\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">)&#34;</span>, <span style="color:#e6db74">&#34;Today&#39;s date is 2024-09-19&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 2024&#34;</span>
+</span></span></code></pre></div><p>Explanation:</p>
+<ul>
+<li><code>(?P\&lt;year\&gt;\d{4})</code>: Captures the year as a named group year.</li>
+<li><code>(?P\&lt;month\&gt;\d{2})</code>: Captures the month as a named group month.</li>
+<li><code>(?P\&lt;day\&gt;\d{2})</code>: Captures the day as a named group day.</li>
+</ul>
+<h3 id="non-capturing-group-">Non-Capturing Group <code>(?:...)</code></h3>
+<p>A non-capturing group ((?:&hellip;)) is used to group parts of a regex together without saving (or capturing) that part separately. It still matches the text, but it won&rsquo;t save it as a separate part for later use.</p>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(?:http|https)://\w+\.\w+&#34;</span>, <span style="color:#e6db74">&#34;Visit our site at https://example.com and http://mysite.com&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: https://example.comhttp://mysite.com&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(http|https)://\w+\.\w+&#34;</span>, <span style="color:#e6db74">&#34;Visit our site at https://example.com and http://mysite.com&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: httpshttp&#34;</span>
+</span></span></code></pre></div><p>In the first example, even though http or https is matched, it&rsquo;s not saved as a separate group. But the whole URL (<code>https://example.com</code> or <code>http://mysite.com</code>) will still be matched as part of the entire pattern.</p>
+<p>In the second example without Non-Capturing Group, http or https is matched with the rest of the url, only https and http are printed instead of the whole url.</p>
+<h2 id="code-3">Code 3</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matchregex2</span>(pattern, text):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(pattern, text)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">match</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Found:&#34;</span>, <span style="color:#66d9ef">match</span><span style="color:#f92672">.</span>group())
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No match found&#34;</span>)
+</span></span></code></pre></div><h3 id="conditional-groups-conditionyes-patternno-pattern">Conditional Groups <code>(?(condition)yes-pattern|no-pattern)</code></h3>
+<ul>
+<li><code>condition</code>: A condition that determines which pattern to match.</li>
+<li><code>yes-pattern</code>: The pattern to match if the condition is true.</li>
+<li><code>no-pattern</code>: The pattern to match if the condition is false (optional).</li>
+</ul>
+<p>For eg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>matchregex2(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">)-(?(1)\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">|(\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">-\d</span><span style="color:#e6db74">{2}</span><span style="color:#e6db74">))&#34;</span>, <span style="color:#e6db74">&#34;Dates: 2024-09-19 and 09-19&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Found: 2024-09-19&#34;</span>
+</span></span></code></pre></div><p>Simple Explanation:</p>
+<ul>
+<li><code>(?(1)</code>: The regex checks if the first group (the year) is present.</li>
+<li><code>\d{2}-\d{2}</code>: If it is, it expects the rest of the pattern to be in the <code>YYYY-MM-DD</code> format.</li>
+<li><code>(\d{2}-\d{2})</code>: If the year is not present, it matches the <code>MM-DD</code> format directly.</li>
+</ul>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#code-1">Code 1</a></li>
+    <li><a href="#quantifiers-repetition">Quantifiers (Repetition):</a>
+      <ul>
+        <li><a href="#asterisk-">Asterisk <code>*</code></a></li>
+        <li><a href="#plus-">Plus <code>+</code></a></li>
+        <li><a href="#question-mark-">Question Mark <code>?</code></a></li>
+        <li><a href="#exact-count-n">Exact Count <code>{n}</code></a></li>
+        <li><a href="#minimum-count-n">Minimum Count <code>{n,}</code></a></li>
+        <li><a href="#range-count-nm">Range Count <code>{n,m}</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#anchors-positioning">Anchors (Positioning):</a>
+      <ul>
+        <li><a href="#start-of-line-">Start of Line <code>^</code></a></li>
+        <li><a href="#end-of-line-">End of Line <code>$</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#character-classes-sets">Character Classes (Sets):</a>
+      <ul>
+        <li><a href="#dot-">Dot <code>.</code></a></li>
+        <li><a href="#character-class-">Character Class <code>[...]</code></a></li>
+        <li><a href="#negated-character-class-">Negated Character Class <code>[^...]</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#predefined-character-classes">Predefined Character Classes:</a>
+      <ul>
+        <li><a href="#digit-d">Digit <code>\d</code></a></li>
+        <li><a href="#non-digit-d">Non-Digit <code>\D</code></a></li>
+        <li><a href="#word-character-w">Word Character <code>\w</code></a></li>
+        <li><a href="#non-word-character-w">Non-Word Character <code>\W</code></a></li>
+        <li><a href="#whitespace-character-s">Whitespace Character <code>\s</code></a></li>
+        <li><a href="#non-whitespace-character-s">Non-Whitespace Character <code>\S</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#grouping-and-alternation">Grouping and Alternation</a>
+      <ul>
+        <li><a href="#capturing-group-">Capturing Group <code>(...)</code></a></li>
+        <li><a href="#alternation-">Alternation <code>|</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#escape-sequences">Escape Sequences</a>
+      <ul>
+        <li><a href="#backslash-">Backslash <code>\\</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#boundary-matchers">Boundary Matchers</a>
+      <ul>
+        <li><a href="#word-boundary-b">Word Boundary <code>\b</code></a></li>
+        <li><a href="#non-word-boundary-b">Non-Word Boundary <code>\B</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#regex-special-constructs">Regex Special Constructs</a>
+      <ul>
+        <li><a href="#atomic-group-">Atomic Group <code>(?&gt;...)</code></a></li>
+        <li><a href="#positive-lookahead-">Positive Lookahead <code>(?=...)</code></a></li>
+        <li><a href="#negative-lookahead-">Negative Lookahead <code>(?!...)</code></a></li>
+        <li><a href="#positive-lookbehind-">Positive Lookbehind <code>(?&lt;=...)</code></a></li>
+        <li><a href="#negative-lookbehind-">Negative Lookbehind <code>(?&lt;!...)</code></a></li>
+        <li><a href="#named-capture-groups-pname">Named Capture Groups <code>(?P&lt;name&gt;...)</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#code-2">Code 2</a>
+      <ul>
+        <li><a href="#non-capturing-group-">Non-Capturing Group <code>(?:...)</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#code-3">Code 3</a>
+      <ul>
+        <li><a href="#conditional-groups-conditionyes-patternno-pattern">Conditional Groups <code>(?(condition)yes-pattern|no-pattern)</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Jolicious</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+baseURL = "https://jolicious.me/"
+defaultContentLanguage = "en"
+languageCode = "en"
+
+title = "Jolicious"
+
+theme = "gokarna"
+
+# Automatically generate robots.txt
+enableRobotsTXT = true
+
+[menu]
+   [[menu.main]]
+    identifier = "Home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    # Unique identifier for a menu item
+    identifier = "blog"
+
+    url = "/blogs/" 
+
+    # Display name
+    name = "Blogs"
+
+    # Weights are used to determine the ordering
+    weight = 2
+
+  [[menu.main]]
+    identifier = "ctf"
+    name = "CTF"
+    url = "/ctf/"
+    weight = 3
+
+    [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+    [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 5
+
+  # [[menu.main]]
+   # identifier = "github"
+   # url = "https://github.com"
+   # weight = 6
+    
+    # We use feather-icons: https://feathericons.com/
+    # pre = "<span data-feather='facebook'></span>"
+
+    
+[params]
+  # URL for the avatar on homepage
+  avatarURL = "/images/avatar.jpg"
+
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+  avatarSize = "size-m"
+
+  # Description to display on homepage
+  description = "Exploring and enhancing web application security through the latest trends, techniques, and tools. 🌲"
+
+  # Accent color is displayed when you hover over <a> tags
+  accentColor = "#FF4D4D"
+
+  # Display "back to top" button on posts
+  ShowBackToTopButton = true
+
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
+
+  socialIcons = [
+    {name = "twitter", url = "https://x.com/jolicious23"},
+    {name = "linkedin", url = "https://www.linkedin.com/in/sushant-mali-a85444235/"},
+    {name="github", url = "https://github.com/jolicious/"}
+  ]
+
+  # Keywords relevant for SEO
+  metaKeywords = ["blog", "gokarna", "hugo", "jolicious"]
+
+  # If you want to display posts on the homepage, the options are
+  # "popular" (order posts by weight), "recent" (order posts by date)
+  # or "" (do not display, default option)
+  showPostsOnHomePage = "recent"
+
+  # Footer text
+  footer = "Jolicious"

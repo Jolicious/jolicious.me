@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="icon" href="/images/icon.png" type="image/x-icon">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>HTB Sau Writeup</title>
+    <meta name="description" content="By Jolicious">
+    <meta name="keywords" content='blog, gokarna, hugo, jolicious, CTF, HTB, Sau, Writeup, hackthebox'>
+
+    <meta property="og:url" content="http://localhost:1313/ctf/sau/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HTB Sau Writeup">
+    <meta property="og:description" content="By Jolicious">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.jpg">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HTB Sau Writeup">
+    <meta name="twitter:description" content="By Jolicious">
+    <meta property="twitter:domain" content="http://localhost:1313/ctf/sau/">
+    <meta property="twitter:url" content="http://localhost:1313/ctf/sau/">
+    <meta name="twitter:image" content="http://localhost:1313/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="http://localhost:1313/ctf/sau/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.9a920d7dabdbad8363b6a0a94e29a9dfebdb7ee64cfcb193a0145e512ef2bdab.js" integrity="sha256-mpINfavbrYNjtqCpTimp3&#43;vbfuZM/LGToBReUS7yvas="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/avatar.jpg' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Jolicious</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/" > Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/blogs/" > Blogs </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/ctf/" > CTF </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/about/" > About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/" > Tags </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                <a>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/" > Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/blogs/" > Blogs </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/ctf/" > CTF </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/about/" > About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/" > Tags </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>HTB Sau Writeup</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">By Jolicious</small>
+	
+
+	
+          <p class="post-date">August 15, 2023
+           
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/ctf">CTF</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/htb">HTB</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/sau">Sau</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/writeup">Writeup</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/hackthebox">hackthebox</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h1 id="machine-name---sau">Machine Name - Sau</h1>
+<p><img src="/sau/Sau.png" alt="Untitled"></p>
+<p>Machine Creater - sau123</p>
+<h3 id="enumeration">Enumeration</h3>
+<h4 id="nmap">Nmap</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#a6e22e">nmap</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">sS</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">sV</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">sC</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">vv</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">oA</span> <span style="color:#a6e22e">nmap</span><span style="color:#f92672">/</span><span style="color:#a6e22e">sau</span> <span style="color:#ae81ff">10.10.11.224</span>
+</span></span></code></pre></div><p><img src="/sau/Sau1.png" alt="Untitled">
+An initial <code>Nmap</code> scan reveal 3 ports open. <code>SSH</code> on port <code>22</code>, <code>http</code> on port <code>80</code> which looks like it is filtered, and it looks like <code>http</code> on port <code>55555</code> which is an unusual port for <code>http</code>.</p>
+<h4 id="http">HTTP</h4>
+<p>Visiting the website on port <code>55555</code>. We are presented with a page to <code>create new basket to inspect HTTP requests</code>.
+<img src="/sau/Sau2.png" alt="Untitled">
+At the bottom of the page, it also leaks the version that is being used to create the website which is <code>1.2.1</code>, which could be use to further enumerate for vulnerabilities.</p>
+<p>When we create a new basket, we are given a token with it.
+<img src="/sau/Sau3.png" alt="Untitled"></p>
+<p>Looking at the page, we can see that there are a lot of functionalities.
+<img src="/sau/Sau4.png" alt="Untitled"></p>
+<p>Looking at each button, we find this one to be interesting.
+<img src="/sau/Sau5.png" alt="Untitled"></p>
+<p>Checking it, we can see that it is use to forward URL.
+<img src="/sau/Sau6.png" alt="Untitled"></p>
+<h3 id="foothold">Foothold</h3>
+<p>Lets examine the functionality, and see if we can access the filtered port.</p>
+<p><img src="/sau/Sau7.png" alt="Untitled"></p>
+<p>We add the localhost to the input and tick the <code>Proxy Response</code> in order to get response to the forward URL back to the client.</p>
+<p>Now if we visit the link <code>http://10.10.11.224:55555/tx5fuoi</code>, we can see that the URL has been forwarded and we are not able to access the page that was filtered
+<img src="/sau/Sau8.png" alt="Untitled"></p>
+<p>We can see that it leaks the version that is being used to create the website which is <code>0.53</code>.</p>
+<p>Searching for exploit with this information, we get an exploit.
+<img src="/sau/Sau9.png" alt="Untitled">
+Let&rsquo;s look at the first one.</p>
+<p>We can see that using curl they are able to get RCE (Remote Code Execution). We can also see that the option <code>-X</code> is not given. <code>curl</code> uses <code>GET</code> method in default.
+<img src="/sau/Sau10.png" alt="Untitled"></p>
+<p>So using that information lets try to exploit and get a reverse shell.</p>
+<p>We write the reverse in a file name <code>index.html</code>. We named it <code>index.html</code> as this is the default page that is searched if no name is provided. So we don&rsquo;t have to keep providing a file name to get reverse shell.
+<img src="/sau/Sau11.png" alt="Untitled"></p>
+<p>Now we open a python server as well as a listener for reverse shell.
+<img src="/sau/Sau12.png" alt="Untitled"></p>
+<p>We configure the settings as shown in the POC (Proof of Concept).
+<img src="/sau/Sau13.png" alt="Untitled"></p>
+<p>Now we reload the page.</p>
+<p>When we check the listener and python server, we can see that the page made a request to our server and we got a reverse shell back.
+<img src="/sau/Sau14.png" alt="Untitled"></p>
+<p>We are able to read <code>user.txt</code> file.
+<img src="/sau/Sau15.png" alt="Untitled"></p>
+<h3 id="privilege-escalation">Privilege Escalation</h3>
+<p>Lets see if the user has any <code>sudo</code> permissions.
+<img src="/sau/Sau16.png" alt="Untitled">
+The user has permissions to run <code>sudo</code> without the use of password. We can see that the user can run <code>/usr/bin/systemctl status trail.service</code> with <code>sudo</code> without any password.</p>
+<p>Let search if we can get root access using it.
+<img src="/sau/Sau17.png" alt="Untitled"></p>
+<p>We get a page that explain how to do it so lets follow it.</p>
+<p><img src="/sau/Sau18.png" alt="Untitled"></p>
+<p>We follow the steps and we are able to get root access.</p>
+<p><img src="/sau/Sau19.png" alt="Untitled">
+We are able to read root.txt.</p>
+<h3 id="references">References</h3>
+<p>RCE - <a href="https://huntr.dev/bounties/be3c5204-fbd9-448d-b97c-96a8d2941e87/">https://huntr.dev/bounties/be3c5204-fbd9-448d-b97c-96a8d2941e87/</a>
+Privilege Escalation - <a href="https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-systemctl-privilege-escalation/">https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-systemctl-privilege-escalation/</a></p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="scrollToTop()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#enumeration">Enumeration</a></li>
+        <li><a href="#foothold">Foothold</a></li>
+        <li><a href="#privilege-escalation">Privilege Escalation</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Jolicious</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

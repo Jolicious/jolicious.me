@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackthebox on Jolicious</title>
+    <link>http://localhost:1313/tags/hackthebox/</link>
+    <description>Recent content in Hackthebox on Jolicious</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Aug 2023 07:07:07 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB Sau Writeup</title>
+      <link>http://localhost:1313/ctf/sau/</link>
+      <pubDate>Tue, 15 Aug 2023 07:07:07 +0100</pubDate>
+      <guid>http://localhost:1313/ctf/sau/</guid>
+      <description>&lt;h1 id=&#34;machine-name---sau&#34;&gt;Machine Name - Sau&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/sau/Sau.png&#34; alt=&#34;Untitled&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Machine Creater - sau123&lt;/p&gt;&#xA;&lt;h3 id=&#34;enumeration&#34;&gt;Enumeration&lt;/h3&gt;&#xA;&lt;h4 id=&#34;nmap&#34;&gt;Nmap&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nmap&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sS&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sV&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sC&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vv&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;oA&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sau&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10.10.11.224&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/sau/Sau1.png&#34; alt=&#34;Untitled&#34;&gt;&#xA;An initial &lt;code&gt;Nmap&lt;/code&gt; scan reveal 3 ports open. &lt;code&gt;SSH&lt;/code&gt; on port &lt;code&gt;22&lt;/code&gt;, &lt;code&gt;http&lt;/code&gt; on port &lt;code&gt;80&lt;/code&gt; which looks like it is filtered, and it looks like &lt;code&gt;http&lt;/code&gt; on port &lt;code&gt;55555&lt;/code&gt; which is an unusual port for &lt;code&gt;http&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h4 id=&#34;http&#34;&gt;HTTP&lt;/h4&gt;&#xA;&lt;p&gt;Visiting the website on port &lt;code&gt;55555&lt;/code&gt;. We are presented with a page to &lt;code&gt;create new basket to inspect HTTP requests&lt;/code&gt;.&#xA;&lt;img src=&#34;http://localhost:1313/sau/Sau2.png&#34; alt=&#34;Untitled&#34;&gt;&#xA;At the bottom of the page, it also leaks the version that is being used to create the website which is &lt;code&gt;1.2.1&lt;/code&gt;, which could be use to further enumerate for vulnerabilities.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
